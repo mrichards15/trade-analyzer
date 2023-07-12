@@ -1,6 +1,6 @@
 import pandas
 
-df = pandas.read_excel('/Users/Matthew/Documents/GitHub/trade-analyzer/FantasyProjections2223.xls')
+df = pandas.read_excel('./FantasyProjections2223.xls')
 
 #print the column names
 #print(df.columns)
