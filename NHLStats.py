@@ -2,12 +2,12 @@ import pandas
 import requests
 import json
 
-player_api_ids = pandas.read_excel('/Users/Matthew/Documents/GitHub/yfantasy-api/nhl-stats.xls', 'PlayerApiIds')
-team_api_ids = pandas.read_excel('/Users/Matthew/Documents/GitHub/yfantasy-api/nhl-stats.xls', 'TeamApiIds')
-draft = pandas.read_excel('/Users/Matthew/Documents/GitHub/yfantasy-api/nhl-stats.xls', 'Draft')
-season1920 = pandas.read_excel('/Users/Matthew/Documents/GitHub/yfantasy-api/nhl-stats.xls', 'Season2019')
-season2021 = pandas.read_excel('/Users/Matthew/Documents/GitHub/yfantasy-api/nhl-stats.xls', 'Season2020')
-season2122 = pandas.read_excel('/Users/Matthew/Documents/GitHub/yfantasy-api/nhl-stats.xls', 'Season2021')
+player_api_ids = pandas.read_excel('/Users/Matthew/Documents/GitHub/trade-analyzer/nhl-stats.xls', 'PlayerApiIds')
+team_api_ids = pandas.read_excel('/Users/Matthew/Documents/GitHub/trade-analyzer/nhl-stats.xls', 'TeamApiIds')
+draft = pandas.read_excel('/Users/Matthew/Documents/GitHub/trade-analyzer/nhl-stats.xls', 'Draft')
+season1920 = pandas.read_excel('/Users/Matthew/Documents/GitHub/trade-analyzer/nhl-stats.xls', 'Season2019')
+season2021 = pandas.read_excel('/Users/Matthew/Documents/GitHub/trade-analyzer/nhl-stats.xls', 'Season2020')
+season2122 = pandas.read_excel('/Users/Matthew/Documents/GitHub/trade-analyzer/nhl-stats.xls', 'Season2021')
 
 #get a data frame with selected columns
 FORMAT = ['Player', 'Age', 'GP']
