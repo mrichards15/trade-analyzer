@@ -309,17 +309,19 @@ def get_player_rank(player, print_vals = "Blank", writer=None):
 
 def is_below_keeper_rank(rank, position):
     p_rank = rank
-    match position:
-        case "G":
-            p_rank -= replacement_goalie_rank
-        case "D":
-            p_rank -= replacement_defence_rank
-        case "C":
-            p_rank -= replacement_centre_rank
-        case "C,LW" | "LW":
-            p_rank -= replacement_lw_rank
-        case _:
-            p_rank -= replacement_rw_rank
+    p_rank -= replacement_rw_rank
+
+    #match position:
+    #    case "G":
+    #        p_rank -= replacement_goalie_rank
+    #    case "D":
+    #        p_rank -= replacement_defence_rank
+    #    case "C":
+    #        p_rank -= replacement_centre_rank
+    #    case "C,LW" | "LW":
+    #        p_rank -= replacement_lw_rank
+     #   case _:
+     #       p_rank -= replacement_rw_rank
 
     return p_rank < keeper_player_rank-replacement_player_rank
 
@@ -381,17 +383,18 @@ def get_draft_results():
     return draft_results
 
 def get_replacement_rank(position):
-    match position:
-        case "G":
-            return replacement_goalie_rank
-        case "D":
-            return replacement_defence_rank
-        case "C":
-            return replacement_centre_rank
-        case "C,LW" | "LW":
-            return replacement_lw_rank
-        case _:
-            return replacement_rw_rank 
+    return replacement_rw_rank 
+    #match position:
+    #    case "G":
+    #        return replacement_goalie_rank
+    #    case "D":
+    #        return replacement_defence_rank
+    #    case "C":
+    #        return replacement_centre_rank
+    #    case "C,LW" | "LW":
+    #        return replacement_lw_rank
+    #    case _:
+    #        return replacement_rw_rank 
 
 
 def get_team_name_by_team_key(key):
